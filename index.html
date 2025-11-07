@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>阿爷专属餐点</title>
+  <meta name="description" content="阿爷专属餐点 — 古晋 Kuching 华人美食（纯文字，卡片式）" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="title">阿爷专属餐点</div>
+      <div class="tagline">每天吃什么？让阿爷帮你选！</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="controls">
+      <select id="mealSelect" class="select">
+        <option value="all">全部时段</option>
+        <option value="breakfast">早餐</option>
+        <option value="lunch">午餐</option>
+        <option value="dinner">晚餐</option>
+      </select>
+
+      <select id="tasteSelect" class="select">
+        <option value="all">全部口味</option>
+        <option value="light">清淡</option>
+        <option value="normal">普通</option>
+        <option value="heavy">重口味</option>
+      </select>
+
+      <select id="spiceSelect" class="select">
+        <option value="all">全部辣度</option>
+        <option value="none">不辣</option>
+        <option value="medium">中辣</option>
+        <option value="hot">很辣</option>
+      </select>
+
+      <button id="applyFilter" class="btn">应用筛选</button>
+      <button id="resetFilter" class="btn secondary">重置筛选</button>
+
+      <div class="result-count" id="resultCount">共有 0 项结果</div>
+      <button id="randomBtn" class="btn" style="margin-left:12px;">懒得想，帮我选一个吧！</button>
+    </div>
+
+    <section id="list">
+      <h2 style="margin-top:18px;">食物列表</h2>
+      <div id="cards" class="grid"></div>
+    </section>
+  </main>
+
+  <!-- Random modal -->
+  <div id="randomModal" class="random-modal hidden">
+    <div class="modal-box">
+      <div id="modalTitle" class="modal-title">标题</div>
+      <div id="modalMeta" class="modal-meta"></div>
+      <div style="margin-top:12px;text-align:right;">
+        <button id="againBtn" class="btn" style="margin-right:8px;">再来一次</button>
+        <button id="closeModal" class="btn secondary">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">© 2025 阿爷专属餐点 · Kuching 华人美食收藏</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
